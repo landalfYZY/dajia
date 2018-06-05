@@ -94,6 +94,33 @@
     background-color: @danger-color
 }
 
+/*tag*/
+.tag(@param){
+    display: block;
+    padding: 5px;
+    width: 40px;
+    border-radius: 3px;
+    text-align: center;
+    @new: hsl(hue(@param), 50%, 90%);
+    color: @param;
+    background-color: @new;
+}
+.tag-primary{
+    .tag(@primary-color);
+}
+.tag-warning{
+    .tag(@warning-color);
+}
+.tag-success{
+    .tag(@success-color);
+}
+.tag-info{
+    .tag(@info-color);
+}
+.tag-danger{
+    .tag(@danger-color);
+}
+
 
 table{
     margin-top: 15px;
