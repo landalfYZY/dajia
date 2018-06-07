@@ -67,9 +67,9 @@
         <div style="float:right;margin-top:20px">
             <Page :total="total" size="small" :page-size="pageSize" @on-change="pageOnChange" show-elevator show-total></Page>
         </div>
-        <Modal v-model="previewModal" :title="listData[previewIndex][previewData.titleFilter]" ok-text="关闭" cancel-text="">
-          <div v-for="(item,index) in previewData.data" :key="index">
-            <div v-if="item.type == 'img'" :style="item.style+'background-image:url('+listData[previewIndex][item.filter]+')'"></div>
+        <Modal v-model="previewModal" :title="previewData.titleFilter ? listData[previewIndex][previewData.titleFilter]:''" ok-text="关闭" cancel-text="">
+          <div  v-for="(item,index) in previewData.data" :key="index">
+            <div v-if="item.type == 'img' " :style="item.style+'background-image:url('+listData[previewIndex][item.filter]+')'"></div>
             <div v-if="item.type == 'text'"  :style="item.style">
               <div class="panel-between">
                 <div>{{item.label}}</div>
