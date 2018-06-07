@@ -53,7 +53,7 @@
                                     <Button type="ghost" :size="item.size" icon="ios-undo-outline" @click="previewIndex = index,previewModal = true"></Button>
                                 </Tooltip>
                                 <Tooltip content="编辑" placement="bottom">
-                                    <Button type="ghost" :size="item.size" icon="ios-compose-outline"></Button>
+                                    <Button type="ghost" :size="item.size" icon="ios-compose-outline" @click="test()"></Button>
                                 </Tooltip>
                                 <Tooltip content="删除" placement="bottom">
                                 <Button type="ghost" :size="item.size" icon="ios-trash-outline"></Button>
@@ -126,6 +126,11 @@ export default {
     this.getList();
   },
   methods: {
+    test(){
+      $.post('http://localhost:8000/api/user/insert',{telNumber:'18768398916',password:'单位'},function(res){
+        console.log(res)
+      })
+    },
     //获取IDS
     getIds() {
       var list = [];
