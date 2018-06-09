@@ -1,6 +1,6 @@
 <template>
     <div>
-        <DjTable title="微信用户" content="asdsdas" :query='query' api="sunwou/miniProMod/find" :table-data="tableData" :search-filter='searchFilter' :preview-data="previewData"></DjTable>
+        <DjTable title="首页" content="asdsdas" :query='query' api="sunwou/miniProMod/find" :table-data="tableData" :search-filter='searchFilter' :preview-data="previewData"></DjTable>
     </div>
 </template>
 <script>

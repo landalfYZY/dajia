@@ -34,8 +34,11 @@
 .panel-around{
     .panel-layout(space-around)
 }
+.panel-center{
+    .panel-layout(center)
+}
 .item-center{
-    align-content: center;
+    align-items: center
 }
 /*font 字体颜色*/
 .font-primary{
@@ -53,7 +56,9 @@
 .font-danger{
     color: @danger-color
 }
-
+.font-white{
+    color: #fff
+}
 /*字体规范*/
 .font-size(@size){
     font-size: @textSize + @size

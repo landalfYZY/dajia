@@ -1,0 +1,17 @@
+.logo-img{
+    width:35px;
+    height: 35px;
+    background: #fff;
+    border-radius: 50px
+}
+.logo-img > img{
+    width: 25px;
+    height: 25px
+}
+.logo-text{
+    color: #fff;
+    margin-left: 15px
+}
+.smeun-item{
+    width: 120px;
+}

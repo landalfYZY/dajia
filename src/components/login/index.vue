@@ -1,5 +1,7 @@
 <template>
-    <div>
-        
-    </div>
+    <transition name="el-fade-in-linear">
+        <div>
+            sad
+        </div>
+    </transition>
 </template>
