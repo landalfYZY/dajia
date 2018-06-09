@@ -1,6 +1,10 @@
 var nav = {
     config:{},
     items:[
+        {icon:'speakerphone',label:'通知公告',children:[
+            {label:'公告列表',path:'#'},
+            {label:'通知列表',path:'#'}
+        ]},
         {icon:'ios-cloud',label:'资源管理',children:[
             {label:'公共文件库',path:'#'},
             {label:'私有库',path:'#'},
@@ -68,18 +72,39 @@ var nav = {
             {label:'任务督导',path:'#'},
         ]},
         {icon:'social-usd',label:'财务管理',children:[
-            {label:'财务报表',path:'#'},
-            {label:'财务上报',path:'#'}
+            {label:'费用报销',path:'#'},
+            {label:'费用报销报表',path:'#'},
+            {label:'借款单',path:'#'},
+            {label:'借款单统计',path:'#'},
+            {label:'还款单',path:'#'},
+            {label:'付款申请',path:'#'},
+            {label:'开票申请',path:'#'}
+        ]},
+        {icon:'ios-browsers',label:'行政管理',children:[
+            {label:'费用报销',path:'#'},
+            {label:'费用报销报表',path:'#'},
+            {label:'借款单',path:'#'},
+            {label:'借款单统计',path:'#'},
+            {label:'还款单',path:'#'},
+            {label:'付款申请',path:'#'},
+            {label:'开票申请',path:'#'}
         ]},
         {icon:'ribbon-a',label:'权限管理',children:[
             {label:'角色管理',path:'#'},
             {label:'新增角色',path:'#'},
             {label:'所有权限',path:'#'}
         ]},
-        {icon:'android-laptop',label:'设备管理',children:[
-            {label:'设备列表',path:'#'},
-            {label:'新增设备',path:'#'},
-            {label:'设备管理记录',path:'#'}
+        {icon:'android-laptop',label:'设备物品管理',children:[
+            {label:'仓库管理',path:'#'},
+            {label:'供应商管理',path:'#'},
+            {label:'物品列表',path:'#'},
+            {label:'出入库操作',path:'#'},
+            {label:'出入库详情',path:'#'},
+            {label:'物品采购',path:'#'},
+            {label:'物品领用',path:'#'},
+            {label:'物品调拨',path:'#'},
+            {label:'物品盘点',path:'#'},
+            {label:'固定资产',path:'#'}
         ]},
         {icon:'ios-paper',label:'日志',children:[
             {label:'操作日志',path:'#'},
@@ -96,15 +121,42 @@ var nav = {
 var cafe = {
     config:{},
     items:[
-        {icon:'ios-cloud',label:'店铺管理',children:[
+        {icon:'speakerphone',label:'通知公告',children:[
+            {label:'公告列表',path:'#'},
+            {label:'通知列表',path:'#'}
+        ]},
+        {icon:'coffee',label:'店铺管理',children:[
             {label:'店铺列表',path:'#'},
             {label:'新增店铺',path:'#'},
             {label:'店铺分析',path:'#'},
         ]},
-        {icon:'network',label:'组织架构',children:[
-            {label:'组织管理',path:'#'},
-            {label:'内部通讯录',path:'#'},
-            {label:'我的薪资',path:'#'},
+        {icon:'filing',label:'进销存',children:[
+            {label:'入库',path:'#'},
+            {label:'出库',path:'#'}
+        ]},
+        {icon:'pricetags',label:'优惠券管理',children:[
+            {label:'优惠券',path:'#'},
+            {label:'发放记录',path:'#'}
+        ]},
+        {icon:'closed-captioning',label:'促销卡管理',children:[
+            {label:'促销卡',path:'#'},
+            {label:'购卡记录',path:'#'},
+            {label:'卡操作日志',path:'#'},
+        ]},
+        {icon:'share',label:'分享管理',children:[
+            {label:'分享规则',path:'#'},
+            {label:'分享记录',path:'#'}
+        ]},
+        {icon:'link',label:'广告及链接',children:[
+            {label:'首页广告',path:'#'},
+            {label:'跳转链接',path:'#'}
+        ]},
+        {icon:'person',label:'微信用户',children:[
+            {label:'用户列表',path:'#'},
+            {label:'内部通讯录',path:'#'}
+        ]},
+        {icon:'ios-gear',label:'小程序UI设置',children:[
+            {label:'UI设置',path:'#'}
         ]},
     ]
 }

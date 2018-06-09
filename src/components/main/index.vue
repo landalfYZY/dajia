@@ -17,7 +17,7 @@
                                         OA办公
                                     </MenuItem>
                                     <MenuItem name="dk_overview">
-                                        <Icon type="ios-keypad"></Icon>
+                                        <Icon type="coffee"></Icon>
                                         达咖平台
                                     </MenuItem>
                                     <MenuItem name="jiaofei">
