@@ -93,6 +93,22 @@ var nav = {
         ]},
     ]
 }
+var cafe = {
+    config:{},
+    items:[
+        {icon:'ios-cloud',label:'店铺管理',children:[
+            {label:'店铺列表',path:'#'},
+            {label:'新增店铺',path:'#'},
+            {label:'店铺分析',path:'#'},
+        ]},
+        {icon:'network',label:'组织架构',children:[
+            {label:'组织管理',path:'#'},
+            {label:'内部通讯录',path:'#'},
+            {label:'我的薪资',path:'#'},
+        ]},
+    ]
+}
 module.exports = {
-    nav:nav
+    nav:nav,
+    cafe:cafe
 }

@@ -1,7 +1,7 @@
 <template>
     <div style="padding:20px">
         <div class="panel-between" style="width:100%">
-            <div >
+            <div>
                 <div class="font-title">{{title}}</div>
                 <div class="font-text">{{content}}</div>
             </div>
