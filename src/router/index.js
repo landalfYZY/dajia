@@ -4,6 +4,7 @@ import Router from 'vue-router'
 import login from '../components/login'
 import main from '../components/main'
 import test from '../components/test'
+import test2 from '../components/test/detailtest'
 /**
  * template
  */
@@ -32,6 +33,7 @@ export default new Router({
     { path: '/', name: '--', component: main ,children:[
       { path: '/oa_main', name: 'OA办公系统', component: oamain,children:[
         { path: '/test', name: '测试', component: test },
+        { path: '/test2', name: '测试2', component: test2 },        
         { path: '/detail', name: '详情', component: detail },
         { path: '/oa_overview', name: '概览', component: oaOverview },
       ] },

@@ -30,7 +30,7 @@
                 </Input>
             </div>
         </div>
-        <table class="table" cellpadding="0" cellspacing="0">
+        <table class="table-bo" cellpadding="0" cellspacing="0">
             <thead >
                 <tr>
                     <th v-for="(item,index) in tableData.data" :key="index"  :style="'width:'+item.width">
