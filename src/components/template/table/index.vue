@@ -1,21 +1,7 @@
 <template>
-    <div style="padding:20px">
-        <div class="panel-between" style="width:100%">
-            <div>
-                <div class="font-title">{{title}}</div>
-                <div class="font-text">{{content}}</div>
-            </div>
-            <div>
-                <Select v-model="pageSize" style="width:100px" size="large" @on-change="pageSizeChange()">
-                    <Option v-for="item in pageSizeList" :value="item" :key="item">每页{{ item }}条</Option>
-                </Select>
-                <Tooltip content="刷新" placement="bottom-start">
-                    <Button type="default" @click="doRefresh()"><Icon size="20" type="ios-refresh-empty"></Icon></Button>
-                </Tooltip>
-            </div>
-        </div>
+    <div >
 
-        <div class="panel-between" style="margin-top:20px">
+        <div class="panel-between" style="margin-top:10px">
             <div>
                 <ButtonGroup>
                     <Button>批量删除</Button>
@@ -24,10 +10,20 @@
                     <Button type="primary">批量下架</Button>
                 </ButtonGroup>
             </div>
-            <div>
-                <Input v-model="searchText" placeholder="输入关键字搜索" @keyup.native.13="search()">
+            <div class="panel-end">
+                <div>
+                  <Input v-model="searchText" placeholder="输入关键字搜索" @keyup.native.13="search()">
                     <Button slot="append" icon="ios-search" @click="search()"></Button>
-                </Input>
+                  </Input>
+                </div>
+                <div style="margin-left:5px">
+                  <Select v-model="pageSize" style="width:100px"  @on-change="pageSizeChange()">
+                      <Option v-for="item in pageSizeList" :value="item" :key="item">每页{{ item }}条</Option>
+                  </Select>
+                  <Tooltip content="刷新" placement="bottom-start">
+                      <Button type="default" @click="doRefresh()"><Icon size="16" type="ios-refresh-empty"></Icon></Button>
+                  </Tooltip>
+                </div>
             </div>
         </div>
         <table class="table-bo" cellpadding="0" cellspacing="0">

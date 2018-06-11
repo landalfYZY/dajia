@@ -1,14 +1,12 @@
 <template>
     <div>
-        <div class="font-title" style="width:100%;text-align:center;margin-bottom:20px">{{title}}</div>
+        
         <table class="table-de" cellpadding="0" cellspacing="0" border="0">
             <tbody>
-                <tr>
-                    <td>1</td><td>1</td><td>1</td>
+                <tr v-for="(item,index) in tdData" :key="index">
+                    <td v-for="(item2,index2) in item" :key="index2" :height="item2.height" :width="item2.width" :rowspan="item2.rowspan" :colspan="item2.colspan">{{item2.td}}</td>
                 </tr>
-                <tr>
-                    <td>1</td><td colspan="2">1</td>
-                </tr>
+                
             </tbody>
         </table>
     </div>
@@ -16,7 +14,7 @@
 <script>
 export default {
     props:{
-        title:{ type:String , required: true}
+        tdData:{type:Array}
     },
     data(){
         return {

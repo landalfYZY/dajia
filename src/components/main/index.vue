@@ -1,6 +1,7 @@
 <template>
     <transition name="el-fade-in-linear">
         <div>
+            <BackTop></BackTop>
             <Layout>
                 <Header>
                     <Menu mode="horizontal" theme="dark" active-name="oa_overview" @on-select="meunSelect">
@@ -95,13 +96,18 @@ export default {
     watch:{
         $route(){
             this.routes = this.$route.matched
+            if(this.$route.fullPath == '/oa_main'){
+                this.meunSelect('/oa_overview')
+            }
         }
     },
     mounted(){
         that = this;
         this.windowResize()
         this.routes = this.$route.matched
-        this.$router.push('/oa_overview')
+        if(this.$route.fullPath == '/oa_main'){
+                this.meunSelect('/oa_overview')
+        }
     },
     methods:{
         windowResize(){

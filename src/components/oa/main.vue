@@ -6,8 +6,8 @@
                 <Layout>
                     <Sider hide-trigger :style="{background: '#fff'}">
                     <!-- <Cascader v-model="searchNavText" :data="navUrl.items" filterable></Cascader> -->
-                        <Menu active-name="0" theme="light" width="auto" :open-names="['0']" :style="{minHeight: (contentHeight-50)+'px'}" accordion >
-                            <MenuItem name="0">
+                        <Menu active-name="/oa_overview" theme="light" width="auto" :open-names="[]" :style="{minHeight: (contentHeight-50)+'px'}" accordion @on-select="meunSelect">
+                            <MenuItem name="/oa_overview">
                                 <Icon type="ios-home"></Icon>
                                 首页
                             </MenuItem>
@@ -16,12 +16,12 @@
                                     <Icon :type="item.icon"></Icon>
                                     {{item.label}}
                                 </template>
-                                <MenuItem  v-for="(item2,index2) in item.children" v-if="item2.path" :key="index2" :name="index-index2">{{item2.label}}</MenuItem>
+                                <MenuItem  v-for="(item2,index2) in item.children" v-if="item2.path" :key="index2" :name="item2.path">{{item2.label}}</MenuItem>
                                 <Submenu v-for="(item2,index2) in item.children" v-if="!item2.path" :key="index2" :name="item2.label" >
                                     <template slot="title">
                                         {{item2.label}}
                                     </template>
-                                    <MenuItem  v-for="(item3,index3) in item2.children"  :key="index3" :name="index-index2-index3">{{item3.label}}</MenuItem>
+                                    <MenuItem  v-for="(item3,index3) in item2.children"  :key="index3" :name="item3.path">{{item3.label}}</MenuItem>
                                 </Submenu>
                             </Submenu>
                         </Menu>
@@ -48,7 +48,6 @@ export default {
     mounted(){
         that = this;
         this.windowResize()
-        this.$router.push('/oa_overview')
     },
     methods:{
         windowResize(){
@@ -56,6 +55,9 @@ export default {
             $(window).resize(function(){
                 that.contentHeight = window.innerHeight-64-62-60;
             })
+        },
+        meunSelect(e){
+            this.$router.push(e)
         }
     }
 }

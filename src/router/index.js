@@ -4,7 +4,6 @@ import Router from 'vue-router'
 import login from '../components/login'
 import main from '../components/main'
 import test from '../components/test'
-import test2 from '../components/test/detailtest'
 /**
  * template
  */
@@ -16,6 +15,10 @@ import detail from '../components/template/detail'
  */
 import oamain from '../components/oa/main'
 import oaOverview from '../components/oa/overview'
+import oaProfile from '../components/oa/personal/profile'  //个人资料
+import oaCompany from '../components/oa/organization/company'
+import oaOrganization from '../components/oa/organization/organization'
+import oaApplication from '../components/oa/procedure/application' //申请流程
 
 /**
  * 达咖系统
@@ -32,10 +35,13 @@ export default new Router({
     
     { path: '/', name: '--', component: main ,children:[
       { path: '/oa_main', name: 'OA办公系统', component: oamain,children:[
-        { path: '/test', name: '测试', component: test },
-        { path: '/test2', name: '测试2', component: test2 },        
+        { path: '/test', name: '测试', component: test },       
         { path: '/detail', name: '详情', component: detail },
         { path: '/oa_overview', name: '概览', component: oaOverview },
+        { path: '/oa_profile', name: '个人资料', component: oaProfile },
+        { path: '/oa_company', name: '公司单位', component: oaCompany },
+        { path: '/oa_organization', name: '组织结构', component: oaOrganization },
+        { path: '/oa_application', name: '申请流程', component: oaApplication },
       ] },
       { path: '/dk_main', name: '达咖平台', component: dkmain,children:[
         { path: '/dk_overview', name: '概览', component: dkOverview },

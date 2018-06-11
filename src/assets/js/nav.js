@@ -10,16 +10,17 @@ var nav = {
             {label:'私有库',path:'#'},
             {label:'我的图库',path:'#'},
         ]},
-        {icon:'network',label:'组织架构',children:[
-            {label:'组织管理',path:'#'},
-            {label:'内部通讯录',path:'#'},
-            {label:'我的薪资',path:'#'},
+        {icon:'network',label:'组织结构',children:[
+            {label:'公司单位',path:'/oa_company'},
+            {label:'组织结构管理',path:'/oa_organization'},
+            {label:'用户管理',path:'#'},
+            {label:'组管理',path:'#'},
         ]},
         {icon:'ios-person',label:'个人中心',children:[
             {label:'提醒信息',path:'#'},
             {label:'个人设置',path:'#'},
             {label:'安全中心',path:'#'},
-            {label:'个人资料',path:'#'},
+            {label:'个人资料',path:'oa_profile'},
             {label:'我的薪资',path:'#'},
             {label:'个人通讯录',path:'#'},
             {label:'操作记录',path:'#'},
@@ -57,7 +58,7 @@ var nav = {
         ]},
         {icon:'ios-settings-strong',label:'流程管理',children:[
             {label:'待办/处理',path:'#'},
-            {label:'申请流程',path:'#'},
+            {label:'申请流程',path:'/oa_application'},
             {label:'我的申请',path:'#'},
             {label:'我申请未通过',path:'#'},
             {label:'我下属的申请',path:'#'},
