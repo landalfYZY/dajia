@@ -96,7 +96,7 @@ export default {
     watch:{
         $route(){
             this.routes = this.$route.matched
-            if(this.$route.fullPath == '/oa_main'){
+            if(this.$route.fullPath == '/oa_main' || this.$route.fullPath == '/'){
                 this.meunSelect('/oa_overview')
             }
         }
@@ -105,7 +105,7 @@ export default {
         that = this;
         this.windowResize()
         this.routes = this.$route.matched
-        if(this.$route.fullPath == '/oa_main'){
+        if(this.$route.fullPath == '/oa_main' || this.$route.fullPath == '/'){
                 this.meunSelect('/oa_overview')
         }
     },
