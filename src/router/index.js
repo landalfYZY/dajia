@@ -26,13 +26,18 @@ import oaApplication from '../components/oa/procedure/application' //申请流�
 import dkmain from '../components/daka/main'
 import dkOverview from '../components/daka/overview'
 
+/**
+ * 缴费系统
+ */
+import paymain from '../components/pay/main'
+import payOverview from '../components/pay/overview'
+
 Vue.use(Router)
 
 export default new Router({
   routes: [
     { path: '/login', name: '登录', component: login },
     { path: '/table', name: '表格', component: table },
-    
     { path: '/', name: '--', component: main ,children:[
       { path: '/oa_main', name: 'OA办公系统', component: oamain,children:[
         { path: '/test', name: '测试', component: test },       
@@ -45,6 +50,9 @@ export default new Router({
       ] },
       { path: '/dk_main', name: '达咖平台', component: dkmain,children:[
         { path: '/dk_overview', name: '概览', component: dkOverview },
+      ] },
+      { path: '/pay_main', name: '缴费平台', component: paymain,children:[
+        { path: '/pay_overview', name: '概览', component: payOverview },
       ] },
       
     ]}

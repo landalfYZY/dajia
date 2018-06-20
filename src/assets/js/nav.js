@@ -161,7 +161,25 @@ var cafe = {
         ]},
     ]
 }
+var pay = {
+    config:{},
+    items:[
+        {icon:'speakerphone',label:'通知公告',children:[
+            {label:'公告列表',path:'#'},
+            {label:'通知列表',path:'#'}
+        ]},
+        {icon:'nuclear',label:'企业管理',children:[
+            {label:'企业列表',path:'#'},
+            {label:'快速接入企业',path:'#'}
+        ]},
+        {icon:'ios-gear',label:'小程序设置',children:[
+            {label:'通知设置',path:'#'},
+            {label:'UI设置',path:'#'}
+        ]},
+    ]
+}
 module.exports = {
     nav:nav,
-    cafe:cafe
+    cafe:cafe,
+    pay:pay
 }

@@ -21,7 +21,7 @@
                                         <Icon type="coffee"></Icon>
                                         达咖平台
                                     </MenuItem>
-                                    <MenuItem name="jiaofei">
+                                    <MenuItem name="pay_overview">
                                         <Icon type="ios-analytics"></Icon>
                                         缴费平台
                                     </MenuItem>
